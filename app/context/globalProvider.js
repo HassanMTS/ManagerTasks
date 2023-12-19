@@ -18,5 +18,8 @@ export const GlobalProvider = ({ children }) => {
                 {children}
             </GlobalUpdateContext.Provider>
         </GlobalContext.Provider>
-    )
-}
+    );
+};
+
+export const useGlobalState = () => useContext(GlobalContext);
+export const useGlobalUpdate = () => useContext(GlobalUpdateContext);
