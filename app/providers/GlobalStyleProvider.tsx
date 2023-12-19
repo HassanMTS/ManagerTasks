@@ -15,7 +15,6 @@ const GlobalStyles = styled.div`
   display: flex;
   gap: 2.5rem;
   height: 100%;
-  transition: all 0.3s ease-in-out;
   `;
 
 export default GlobalStyleProvider;

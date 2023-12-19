@@ -16,6 +16,10 @@ function ContextProvider({ children }: Props) {
         }, 200);
     }, []);
     
+    if (!isReady) {
+        return null;
+    }
+
     return <GlobalProvider>{children}</GlobalProvider>
 }
 
