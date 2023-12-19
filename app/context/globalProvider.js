@@ -1,5 +1,7 @@
 "use client"
 import React, { createContext, useState, useContext } from "react";
+import themes from "./themes";
+
 
 export const GlobalContext = createContext()
 export const GlobalUpdateContext = createContext()
@@ -14,7 +16,7 @@ export const GlobalProvider = ({ children }) => {
             theme,
         }}
         >
-            <GlobalUpdateContext.Provider value={setGlobalState}>
+            <GlobalUpdateContext.Provider value={{}}>
                 {children}
             </GlobalUpdateContext.Provider>
         </GlobalContext.Provider>
