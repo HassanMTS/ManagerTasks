@@ -3,20 +3,50 @@ import React from "react";
 import styled from 'styled-components';
 import { useGlobalState } from "@/app/context/globalProvider";
 import Image from "next/image";
+import menu from "@/app/utils/menu";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 function Sidebar() {
 const {theme} = useGlobalState();
 
-return <SidebarStyled theme={theme}>
+const router = useRouter();
+
+const handleClick = (link:string) => {
+    router.push(link)
+};
+
+return (
+
+<SidebarStyled theme={theme}>
     <div className="profile">
         <div className="profile-overlay"></div>
+        <div className="image">
         <Image width={70} height={70} src="/avatar.jpg" alt="profile" />
     </div>
     <h1>
         <span>Hassan</span>
         <span> Talib</span>
     </h1>
-</SidebarStyled>;
+    </div>
+    <ul className="nav-items">
+        {menu.map((item) => { 
+            return ( 
+                <li 
+                className={'nav-item'}
+                onClick={() => {
+                    handleClick(item.link);
+                }}
+                >
+                {item.icon}
+                <Link href={item.link}>{item.title}</Link>
+            </li>
+        );
+        })}
+    </ul>
+</SidebarStyled>
+);
 }
 
 const SidebarStyled = styled.nav`
