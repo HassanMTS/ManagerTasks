@@ -141,5 +141,31 @@ const SidebarStyled = styled.nav`
               }
             }
           }
+
+          .profile {
+          }
+
+          .nav-item{
+            position: relative;
+            padding: 0.8rem 1rem 0.9rem 2.1rem;
+            margin: 0.3rem 0;
+        
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            cursor: pointer;
+            align-items: center;
+        
+            &::after {
+              position: absolute;
+              content: "";
+              left: 0;
+              top: 0;
+              width: 0;
+              height: 100%;
+              background-color: ${(props) => props.theme.activeNavLinkHover};
+              z-index: 1;
+              transition: all 0.3s ease-in-out;
+            }
+          }
 `;
 export default Sidebar;
