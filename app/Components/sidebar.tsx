@@ -96,6 +96,25 @@ const SidebarStyled = styled.nav`
 
             opacity: 0.2;
         }
+        h1 {
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+      
+            line-height: 1.4rem;
+        }
+            .image,
+            h1 {
+              position: relative;
+              z-index: 1;
+            }
+          .image {
+            flex-shrink: 0;
+            display: inline-block;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border-radius: 100%;
+          }
     }
 `;
 export default Sidebar;
