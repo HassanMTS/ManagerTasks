@@ -5,13 +5,15 @@ import { useGlobalState } from "@/app/context/globalProvider";
 import Image from "next/image";
 import menu from "@/app/utils/menu";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+
 
 
 function Sidebar() {
 const {theme} = useGlobalState();
 
 const router = useRouter();
+const pathname = usePathname();
 
 const handleClick = (link:string) => {
     router.push(link)
@@ -32,11 +34,12 @@ return (
     </div>
     <ul className="nav-items">
         {menu.map((item) => { 
+            const link = item.link;
             return ( 
                 <li 
-                className={'nav-item'}
+                className={`nav-item ${pathname === link ? "active" : ""}`}
                 onClick={() => {
-                    handleClick(item.link);
+                    handleClick(link);
                 }}
                 >
                 {item.icon}
@@ -56,5 +59,9 @@ const SidebarStyled = styled.nav`
     border: 2px solid ${(props) => props.theme.borderColor2};
 
     border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `;
 export default Sidebar;
