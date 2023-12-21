@@ -198,6 +198,22 @@ const SidebarStyled = styled.nav`
               }
             }
             }
+            .active {
+                background-color: ${(props) => props.theme.activeNavLink};
             
-`;
+                i,
+                a {
+                  color: ${(props) => props.theme.colorIcons2};
+                }
+              }
+            
+              .active::before {
+                width: 0.3rem;
+              }
+            
+              > button {
+                margin: 1.5rem;
+              }
+            `;
+            
 export default Sidebar;
