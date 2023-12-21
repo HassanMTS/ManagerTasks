@@ -92,6 +92,9 @@ const SidebarStyled = styled.nav`
             background: ${(props) => props.theme.colorBg3};
             transition: all 0.55s linear;
             border-radius: 1rem;
+            border: 2px solid ${(props) => props.theme.borderColor2};
+
+            opacity: 0.2;
         }
     }
 `;
