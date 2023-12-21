@@ -29,7 +29,7 @@ return (
     </div>
     <h1>
         <span>Hassan</span>
-        <span> Talib</span>
+        <span>  Talib</span>
     </h1>
     </div>
     <ul className="nav-items">
@@ -48,6 +48,7 @@ return (
         );
         })}
     </ul>
+    <button></button>
 </SidebarStyled>
 );
 }
@@ -63,5 +64,22 @@ const SidebarStyled = styled.nav`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    color: ${(props) => props.theme.colorGrey3};
+
+    .profile {
+        margin: 1.5rem;
+        padding: 1rem 0.8rem;
+        position: relative;
+
+        border-radius: 1rem;
+        cursor: pointer;
+
+        font-weight: 500;
+        color: ${(props) => props.theme.colorGrey3};
+
+        display: flex;
+        align-items: center;
+    }
 `;
 export default Sidebar;
