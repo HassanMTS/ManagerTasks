@@ -166,6 +166,38 @@ const SidebarStyled = styled.nav`
               z-index: 1;
               transition: all 0.3s ease-in-out;
             }
-          }
+            &::before {
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 0;
+                width: 0%;
+                height: 100%;
+                background-color: ${(props) => props.theme.colorGreenDark};
+          
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+              }
+              a {
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+                z-index: 2;
+                line-height: 0;
+              }
+          
+              i {
+                display: flex;
+                align-items: center;
+                color: ${(props) => props.theme.colorIcons};
+              }
+          
+              &:hover {
+                &::after {
+                  width: 100%;
+                }
+              }
+            }
+            }
+            
 `;
 export default Sidebar;
