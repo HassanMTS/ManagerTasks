@@ -102,19 +102,44 @@ const SidebarStyled = styled.nav`
             flex-direction: column;
       
             line-height: 1.4rem;
-        }
-            .image,
-            h1 {
-              position: relative;
-              z-index: 1;
-            }
+          }
+      
+          .image,
+          h1 {
+            position: relative;
+            z-index: 1;
+          }
+      
           .image {
             flex-shrink: 0;
             display: inline-block;
             overflow: hidden;
             transition: all 0.5s ease;
             border-radius: 100%;
+      
+            width: 70px;
+            height: 70px;
+      
+            img {
+              border-radius: 100%;
+              transition: all 0.5s ease;
+            }
           }
-    }
+          > h1 {
+            margin-left: 0.8rem;
+            font-size: clamp(1.2rem, 4vw, 1.4rem);
+            line-height: 100%;
+          }
+          &:hover {
+            .profile-overlay {
+              opacity: 1;
+              border: 2px solid ${(props) => props.theme.borderColor2};
+            }
+
+            img {
+                transform: scale(1.1);
+              }
+            }
+          }
 `;
 export default Sidebar;
