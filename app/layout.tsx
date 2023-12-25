@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Sidebar from './Components/sidebar'
+import Sidebar from './Components/Sidebar/sidebar'
 import GlobalStyleProvider from './providers/GlobalStyleProvider'
 import ContextProvider from './providers/ContextProvider'
 import { ClerkProvider, auth } from '@clerk/nextjs'
