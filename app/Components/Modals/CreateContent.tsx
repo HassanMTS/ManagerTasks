@@ -47,7 +47,7 @@ function CreateContent() {
           name="description"
           id="description"
           rows={4}
-          placeholder="e.g, Watch a video about Next.js Auth"
+          placeholder="e.g, Hello this is made by Hassan Talib"
         ></textarea>
       </div>
       {/* Add other input fields as needed */}
