@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import CreateContent from "../Modals/CreateContent";
 import { title } from "process";
+import TaskItem from "../TaskItem/TaskItem";
 
 function Tasks() {
     const { theme } = useGlobalState();
@@ -13,13 +14,7 @@ function Tasks() {
 <h1>{title}</h1>
 <div className="tasks grid">
 {Tasks.map((task) => (
-    <div className="task" key={task._id}>
-        <h2>{task.title}</h2>
-        <p>{task.description}</p>
-        <p>{task.date}</p>
-        <p>{task.completed}</p>
-        <p>{task.important}</p>
-        </div>
+    <TaskItem key={task.id} task={{...task}} />
 ))}
 </div>
 </TaskStyled>
