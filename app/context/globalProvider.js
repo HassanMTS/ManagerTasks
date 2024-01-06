@@ -44,4 +44,4 @@ React.useEffect(() => {
 };
 
 export const useGlobalState = () => useContext(GlobalContext);
-export const useGlobalUpdate = () => useContext(GlobalUpdateContext);d
+export const useGlobalUpdate = () => useContext(GlobalUpdateContext);
