@@ -5,7 +5,10 @@ interface Props {
     task: any;
 }
 
-function TaskItem({task} Props) {
-    const{ title, description, date, Completed, important } = Props;
+function TaskItem({task}: Props) {
+    const{ title, description, date, Completed, important } = task;
 
-export default TaskItem;
+    return <div>TaskItem</div>;
+}
+
+export default TaskItem; 
