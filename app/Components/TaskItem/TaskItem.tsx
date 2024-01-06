@@ -8,11 +8,13 @@ interface Props {
 function TaskItem({task}: Props) {
     const{ title, description, date, Completed, important } = task;
 
-    return <div>
+    return (
+        <div>
         <h1>{title}</h1>
         <p>{description}</p>
-        <p>{date}</p>
-    </div>;
+        <p className="date">{date}</p>
+    </div>
+    );
 }
 
 export default TaskItem; 
