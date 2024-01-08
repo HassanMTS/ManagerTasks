@@ -36,9 +36,22 @@ const TaskStyled = styled.main`
   }
 
 
-    >h1{
-        font-size
+  > h1 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 800;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 3rem;
+      height: 0.2rem;
+      background-color: ${(props) => props.theme.colorPrimaryGreen};
+      border-radius: 0.5rem;
     }
+  }
 `;
 
 export default Tasks;
