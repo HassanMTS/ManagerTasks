@@ -20,20 +20,24 @@ function Tasks() {
 </TaskStyled>
     );
 }
+const TaskStyled = styled.main`
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  background-color: ${(props) => props.theme.colorBg2};
+  border: 2px solid ${(props) => props.theme.borderColor2};
+  border-radius: 1rem;
+  height: 100%;
 
-const TaskStyled = styled.div`
-    padding: 2rem;
-    width: 100%;
-    background-color: ${(props) => props.theme.colorBg2};
-    border: 2px solid ${(props) => props.theme.borderColor2};
-    border-radius: 1rem;
-    height: 100%;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
 
 
-    overflow-y auto;
-
-    %::webkit-scrollbar {
-        width: 0.5rem;
+    >h1{
+        font-size
     }
 `;
 

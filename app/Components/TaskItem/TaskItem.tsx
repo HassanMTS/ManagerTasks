@@ -13,6 +13,7 @@ function TaskItem({task}: Props) {
         <h1>{title}</h1>
         <p>{description}</p>
         <p className="date">{date}</p>
+        <div className="task-footer"></div>
     </div>
     );
 }
