@@ -31,10 +31,16 @@ function CreateContent() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    // Add your form submission logic here
-  };
+
+    const task = {
+      title,
+      description,
+      date,
+      completed,
+      important,
+    };
 
   return (
     <div>
@@ -94,5 +100,7 @@ function CreateContent() {
     </div>
   );
 }
+}
 
 export default CreateContent;
+
