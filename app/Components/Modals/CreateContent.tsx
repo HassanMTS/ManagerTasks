@@ -78,7 +78,7 @@ function CreateContent() {
           value={title}
           name="title"
           onChange={handleChange("title")}
-          placeholder="e.g, Watch a video from Fireship."
+          placeholder="Title."
         />
       </div>
       <div className="input-control">
@@ -89,7 +89,7 @@ function CreateContent() {
           name="description"
           id="description"
           rows={4}
-          placeholder="e.g, Watch a video about Next.js Auth"
+          placeholder="Hello welcome to Hassans Task App."
         ></textarea>
       </div>
       <div className="input-control">
@@ -100,6 +100,7 @@ function CreateContent() {
           type="date"
           name="date"
           id="date"
+          
         />
       </div>
       <div className="input-control toggler">
