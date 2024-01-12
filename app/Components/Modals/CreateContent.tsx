@@ -100,7 +100,6 @@ function CreateContent() {
           type="date"
           name="date"
           id="date"
-          
         />
       </div>
       <div className="input-control toggler">
