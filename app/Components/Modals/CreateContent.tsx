@@ -67,6 +67,16 @@ function CreateContent() {
     }
   };
 
+  if (!res.data.error) {
+    toast.success("Task created successfully.");
+    allTasks();
+    closeModal();
+  }
+} catch (error) {
+  toast.error("Something went wrong.");
+  console.log(error);
+}
+};
   return (
     <CreateContentStyled onSubmit={handleSubmit} theme={theme}>
       <h1>Create a Task</h1>
