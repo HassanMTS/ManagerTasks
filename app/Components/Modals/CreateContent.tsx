@@ -67,7 +67,6 @@ function CreateContent() {
     }
   };
 
-  
   return (
     <CreateContentStyled onSubmit={handleSubmit} theme={theme}>
       <h1>Create a Task</h1>
