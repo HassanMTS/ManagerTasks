@@ -138,7 +138,6 @@ function CreateContent() {
     </CreateContentStyled>
   );
 }
-
 const CreateContentStyled = styled.form`
   > h1 {
     font-size: clamp(1.2rem, 5vw, 1.6rem);
