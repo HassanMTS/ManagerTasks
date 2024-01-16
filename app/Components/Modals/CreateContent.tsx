@@ -69,7 +69,7 @@ function CreateContent() {
 
   return (
     <CreateContentStyled onSubmit={handleSubmit} theme={theme}>
-      <h1>Create a Task</h1>
+      <h1>Create a Task</h1>-[]
       <div className="input-control">
         <label htmlFor="title">Title</label>
         <input
@@ -78,7 +78,7 @@ function CreateContent() {
           value={title}
           name="title"
           onChange={handleChange("title")}
-          placeholder="Title."
+          placeholder="Title."  
         />
       </div>
       <div className="input-control">
