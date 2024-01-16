@@ -69,7 +69,7 @@ function CreateContent() {
 
   return (
     <CreateContentStyled onSubmit={handleSubmit} theme={theme}>
-      <h1>Create a Task</h1>-[]
+      <h1>Create a Task</h1>
       <div className="input-control">
         <label htmlFor="title">Title</label>
         <input
@@ -78,7 +78,7 @@ function CreateContent() {
           value={title}
           name="title"
           onChange={handleChange("title")}
-          placeholder="Title."  
+          placeholder="e.g, Watch a video from Fireship."
         />
       </div>
       <div className="input-control">
@@ -89,7 +89,7 @@ function CreateContent() {
           name="description"
           id="description"
           rows={4}
-          placeholder="Hello welcome to Hassans Task App."
+          placeholder="e.g, Watch a video about Next.js Auth"
         ></textarea>
       </div>
       <div className="input-control">
