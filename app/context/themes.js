@@ -1,7 +1,7 @@
 const themes = [
   {
     name: "default",
-    colorBg: "#252525",
+    colorBg: "#46e50400",
     colorBg2: "#46e50400",
     colorBg3: "#181818",
     colorBg4: "#1A1A1A",
